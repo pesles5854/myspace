@@ -1,0 +1,653 @@
+/* Retro 2000s MySpace Theme for Harry Potter */
+
+:root {
+  --myspace-blue: #003366;
+  --myspace-light-blue: #6699cc;
+  --myspace-bg: #e5e5e5;
+  --gryffindor-red: #740001;
+  --gryffindor-gold: #d3a625;
+  --dark-red: #4a0000;
+  --card-bg: #ffffff;
+  --border-color: #003366;
+  --text-dark: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  background-color: var(--myspace-bg);
+  background-image: radial-gradient(#d0d0d0 1px, transparent 0);
+  background-size: 16px 16px;
+  color: var(--text-dark);
+  line-height: 1.4;
+  padding-bottom: 30px;
+}
+
+a {
+  color: var(--myspace-blue);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--gryffindor-red);
+}
+
+/* TOP NAVIGATION */
+.top-nav {
+  background-color: var(--myspace-blue);
+  border-bottom: 2px solid var(--gryffindor-gold);
+  color: white;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+}
+
+.top-nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.top-nav .logo {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.top-nav .logo span {
+  font-size: 11px;
+  color: var(--gryffindor-gold);
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.top-nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  padding: 0 4px;
+}
+
+.top-nav .nav-links a:hover {
+  text-decoration: underline;
+  color: #ffeb3b;
+}
+
+.search-box input {
+  font-size: 11px;
+  padding: 2px 5px;
+  border: 1px solid #999;
+  width: 130px;
+}
+
+.search-box button {
+  font-size: 10px;
+  padding: 2px 6px;
+  background: var(--gryffindor-gold);
+  border: 1px solid #888;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* PROFILE HEADER */
+.profile-header {
+  background: linear-gradient(135deg, var(--gryffindor-red) 0%, var(--dark-red) 100%);
+  border: 2px solid var(--gryffindor-gold);
+  color: var(--gryffindor-gold);
+  padding: 15px 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.profile-header h1 {
+  font-size: 26px;
+  font-family: 'Georgia', serif;
+  text-shadow: 1px 1px 2px #000;
+  letter-spacing: 1px;
+}
+
+.profile-header .tagline {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* GRID LAYOUT */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD COMMON STYLES */
+.card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.card h2, .card h3 {
+  background-color: var(--myspace-light-blue);
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  margin: -10px -10px 10px -10px;
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+}
+
+/* LEFT COLUMN CARDS */
+.profile-pic-card h2 {
+  background-color: var(--gryffindor-red);
+}
+
+.avatar-container {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.avatar {
+  width: 140px;
+  height: 150px;
+  background: linear-gradient(to bottom, #fde2cd, #f8c39e);
+  border: 3px double var(--gryffindor-red);
+  margin: 0 auto;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+/* Harry's Face CSS Details */
+.scar {
+  position: absolute;
+  top: 15px;
+  left: 82px;
+  font-size: 20px;
+  color: #c0392b;
+  font-weight: bold;
+  transform: rotate(15deg);
+  text-shadow: 0 0 2px #e74c3c;
+}
+
+.glasses {
+  position: absolute;
+  top: 48px;
+  left: 20px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.glasses .lens {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #111;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.glasses .bridge {
+  width: 16px;
+  height: 3px;
+  background: #111;
+}
+
+.scarf {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--gryffindor-red),
+    var(--gryffindor-red) 12px,
+    var(--gryffindor-gold) 12px,
+    var(--gryffindor-gold) 24px
+  );
+  border-top: 2px solid #333;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.user-status {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+
+.user-info {
+  text-align: center;
+  font-size: 11px;
+  color: #555;
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px dashed #ccc;
+  padding: 6px 0;
+  margin-bottom: 8px;
+}
+
+.view-my {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+}
+
+/* CONTACT CARD */
+.contact-card h3 {
+  background-color: var(--gryffindor-red);
+}
+
+.contact-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.contact-buttons button {
+  background: #f4f4f4;
+  border: 1px solid #999;
+  padding: 6px 4px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  color: var(--myspace-blue);
+  border-radius: 2px;
+}
+
+.contact-buttons button:hover {
+  background: #e2e8f0;
+  border-color: var(--myspace-blue);
+}
+
+/* DETAILS CARD */
+.details-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.details-card td {
+  padding: 4px 2px;
+  vertical-align: top;
+  border-bottom: 1px dotted #e0e0e0;
+}
+
+.details-card .label {
+  font-weight: bold;
+  color: var(--myspace-blue);
+  width: 40%;
+}
+
+.badge.gryffindor {
+  background-color: var(--gryffindor-red);
+  color: var(--gryffindor-gold);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+/* STATUS & MOOD BOX */
+.status-box {
+  background-color: #fff9e6;
+  border: 2px solid var(--gryffindor-gold);
+}
+
+.status-box .status-title {
+  font-weight: bold;
+  color: var(--gryffindor-red);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.status-box .status-content {
+  font-size: 12px;
+}
+
+.status-box .mood-emoji {
+  font-size: 14px;
+}
+
+/* MUSIC PLAYER */
+.music-card h3 {
+  background-color: #333;
+}
+
+.player-body {
+  background: #222;
+  color: #00ffcc;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.now-playing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  background: #111;
+  padding: 6px;
+  border: 1px solid #444;
+}
+
+.music-icon {
+  font-size: 20px;
+}
+
+.song-info strong {
+  display: block;
+  font-size: 11px;
+  color: #fff;
+}
+
+.song-info span {
+  font-size: 10px;
+  color: #aaa;
+}
+
+.visualizer {
+  display: flex;
+  gap: 3px;
+  height: 20px;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  background: #000;
+  padding: 3px;
+}
+
+.visualizer .bar {
+  flex: 1;
+  background: #00ffcc;
+  height: 30%;
+  animation: pulse 1s infinite alternate ease-in-out;
+}
+
+.visualizer .bar:nth-child(2) { animation-delay: 0.2s; }
+.visualizer .bar:nth-child(3) { animation-delay: 0.4s; }
+.visualizer .bar:nth-child(4) { animation-delay: 0.1s; }
+.visualizer .bar:nth-child(5) { animation-delay: 0.5s; }
+.visualizer .bar:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes pulse {
+  0% { height: 10%; background: #0088cc; }
+  100% { height: 100%; background: #00ffcc; }
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.player-controls button {
+  background: #444;
+  color: white;
+  border: 1px solid #666;
+  padding: 4px 8px;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.player-controls button:hover {
+  background: #666;
+}
+
+.volume-label {
+  margin-left: auto;
+  font-size: 10px;
+  color: #aaa;
+}
+
+/* TOP 8 FRIENDS GRID */
+.friends-card h3 {
+  background-color: var(--gryffindor-red);
+}
+
+.sub-text {
+  font-size: 10px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .friends-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.friend-item {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+.friend-item a {
+  display: block;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.friend-avatar {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 4px auto;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  border-radius: 3px;
+}
+
+.friend-item p {
+  font-size: 9px;
+  color: #777;
+}
+
+/* 7 BOOKS BLOG / CHRONICLE */
+.books-card h3 {
+  background-color: var(--myspace-blue);
+}
+
+.book-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.filter-btn {
+  background: #eee;
+  border: 1px solid #bbb;
+  padding: 3px 6px;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: var(--gryffindor-red);
+  color: white;
+  border-color: var(--dark-red);
+}
+
+.books-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-item {
+  border: 1px solid #ccc;
+  background: #fdfdfd;
+  border-left: 4px solid var(--gryffindor-red);
+  padding: 8px;
+}
+
+.book-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+}
+
+.book-number {
+  background: var(--gryffindor-gold);
+  color: #000;
+  font-weight: bold;
+  font-size: 9px;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.book-header h4 {
+  font-size: 11px;
+  color: var(--myspace-blue);
+  flex-grow: 1;
+}
+
+.book-year {
+  font-size: 10px;
+  color: #777;
+}
+
+.book-body p {
+  margin-bottom: 6px;
+}
+
+.book-meta {
+  background: #f4f6f9;
+  padding: 4px 6px;
+  font-size: 10px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #444;
+}
+
+/* COMMENTS WALL */
+.add-comment-box {
+  background: #f9f9f9;
+  border: 1px dashed #bbb;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.add-comment-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.add-comment-box input, .add-comment-box textarea {
+  font-family: inherit;
+  font-size: 11px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.add-comment-box button {
+  background: var(--myspace-blue);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.add-comment-box button:hover {
+  background: var(--gryffindor-red);
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment-item {
+  border: 1px solid #e0e0e0;
+  padding: 8px;
+  background: #ffffff;
+}
+
+.comment-author {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+}
+
+.comment-author strong {
+  color: var(--myspace-blue);
+}
+
+.comment-date {
+  font-size: 9px;
+  color: #888;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
