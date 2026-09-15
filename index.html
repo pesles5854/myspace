@@ -3,424 +3,238 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MySpace.com - Harry Potter (Chlapec, který přežil)</title>
+  <title>Harry Potter | Nebelvírský Profil</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
-  <header class="top-nav">
-    <div class="top-nav-inner">
-      <div class="logo">MySpace.com<span>| Kouzelnická Edice</span></div>
-      <div class="nav-links">
-        <a href="#about">Domů</a> |
-        <a href="#books">7 Knih</a> |
-        <a href="#friends">Top 8 Přátel</a> |
-        <a href="#comments">Komentáře</a> |
-        <a href="#music">Hudba</a>
-      </div>
-      <div class="search-box">
-        <input type="text" placeholder="Hledat v Bradavicích..." disabled>
-        <button type="button">Hledat</button>
-      </div>
-    </div>
-  </header>
+  <!-- Main Central Square Container -->
+  <div class="main-square">
 
-  <!-- Main Container -->
-  <main class="container">
-
-    <!-- Profile Header Banner -->
-    <div class="profile-header">
+    <!-- Header -->
+    <header class="profile-header">
+      <div class="header-badge">⚡ Nebelvír</div>
       <h1>Harry Potter</h1>
-      <p class="tagline">"Chlapec, který přežil" &bull; Nebelevírský chytač &bull; Member of Dumbledore's Army</p>
-    </div>
+      <p class="tagline">Chlapec, který přežil &bull; Nebelvírský chytač</p>
+    </header>
 
-    <div class="profile-grid">
+    <!-- Main Content Grid -->
+    <main class="content-grid">
 
-      <!-- LEFT COLUMN -->
+      <!-- Left Column: Profile Card & Quick Info & Music -->
       <aside class="left-col">
-
-        <!-- Profile Picture & Quick Details -->
-        <div class="card profile-pic-card">
-          <h2>Harry Potter</h2>
-          <div class="avatar-container">
-            <div class="avatar">
-              <div class="scar">⚡</div>
-              <div class="glasses">
-                <div class="lens left"></div>
-                <div class="bridge"></div>
-                <div class="lens right"></div>
-              </div>
-              <div class="scarf"></div>
-            </div>
+        <div class="card profile-card">
+          <div class="avatar-wrapper">
+            <!-- Harry Avatar SVG -->
+            <svg class="character-avatar main-avatar" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="#f8d7da" stroke="#740001" stroke-width="3"/>
+              <!-- Glasses -->
+              <circle cx="36" cy="48" r="12" fill="none" stroke="#111" stroke-width="3"/>
+              <circle cx="64" cy="48" r="12" fill="none" stroke="#111" stroke-width="3"/>
+              <line x1="48" y1="48" x2="52" y2="48" stroke="#111" stroke-width="3"/>
+              <!-- Lightning Scar -->
+              <path d="M 52 20 L 47 32 L 53 32 L 48 42" stroke="#e74c3c" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <!-- Scarf -->
+              <path d="M 20 75 Q 50 88 80 75 L 80 90 Q 50 100 20 90 Z" fill="#740001"/>
+              <path d="M 35 78 Q 50 86 65 78 L 65 88 Q 50 96 35 88 Z" fill="#eeba30"/>
+            </svg>
           </div>
-          <p class="user-status"><span class="status-dot"></span> <strong>ONLINE</strong> (Právě v Nebelvírské věži)</p>
-          <p class="user-info">
-            Muž, 17 let<br>
-            Bradavice / Zapovězený les<br>
-            Spojené království
-          </p>
-          <div class="view-my">
-            Zobrazení profilu: <strong>777 777</strong><br>
-            Naposledy přihlášen: <em>Dnes 11:59</em>
-          </div>
-        </div>
+          <span class="status-badge"><span class="status-dot"></span> Online v Nebelvíru</span>
 
-        <!-- Contact Box -->
-        <div class="card contact-card">
-          <h3>Kontaktovat Harryho</h3>
-          <div class="contact-buttons">
-            <button onclick="alert('Sova Hedvika byla odeslána s vaší zprávou!')">✉ Poslat sovu</button>
-            <button onclick="alert('Přidán do kouzelnických přátel!')">➕ Přidat do přátel</button>
-            <button onclick="alert('Nebelvírský pozdrav odeslán!')">✨ Poslat jiskru</button>
-            <button onclick="alert('Zablokováno proti Smrtijedům!')">🛡️ Protego protection</button>
+          <div class="quick-info">
+            <p><strong>Věk:</strong> 17 let</p>
+            <p><strong>Kolej:</strong> Nebelvír</p>
+            <p><strong>Hůlka:</strong> Cesmína & Fénixí pírko</p>
+            <p><strong>Patronus:</strong> Jelen 🦌</p>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn" onclick="alert('Sova Hedvika byla odeslána! 🦉')">✉ Poslat sovu</button>
+            <button class="btn" onclick="alert('Přidán do kouzelnických přátel! ✨')">➕ Přidat do přátel</button>
           </div>
         </div>
 
-        <!-- Details / Interests Box -->
-        <div class="card details-card">
-          <h3>Harryho kouzelnické detaily</h3>
-          <table>
-            <tr>
-              <td class="label">Kolej:</td>
-              <td class="value"><span class="badge gryffindor">Nebelvír (Gryffindor)</span></td>
-            </tr>
-            <tr>
-              <td class="label">Hůlka:</td>
-              <td class="value">11 palců, cesmína, ptačí pírko fénixe</td>
-            </tr>
-            <tr>
-              <td class="label">Pozice:</td>
-              <td class="value">Chytač (Nebelvírský Quidditch tým)</td>
-            </tr>
-            <tr>
-              <td class="label">Patronus:</td>
-              <td class="value">Jelen (Stag) 🦌</td>
-            </tr>
-            <tr>
-              <td class="label">Můj Mazlíček:</td>
-              <td class="value">Hedvika (Bílá sova) 🦉</td>
-            </tr>
-            <tr>
-              <td class="label">Koště:</td>
-              <td class="value">Kulový blesk (Firebolt) 🧹</td>
-            </tr>
-            <tr>
-              <td class="label">Oblíbené kouzlo:</td>
-              <td class="value"><code>Expelliarmus!</code></td>
-            </tr>
-          </table>
+        <!-- Music Player Card -->
+        <div class="card music-card">
+          <h3>🎵 Kouzelnický Přehrávač</h3>
+          <div class="player-info">
+            <strong id="song-title">Hedwig's Theme</strong>
+            <span id="song-artist">John Williams</span>
+          </div>
+          <div class="player-controls">
+            <button id="prev-btn" class="mini-btn">⏮</button>
+            <button id="play-btn" class="mini-btn">▶ Přehrát</button>
+            <button id="next-btn" class="mini-btn">⏭</button>
+          </div>
         </div>
-
-        <!-- About Me Section -->
-        <div class="card about-card" id="about">
-          <h3>O mně</h3>
-          <p>
-            Ahoj! Jsem Harry. Žil jsem u strýce Vernona a tety Petunie v Zobí ulici č. 4 v komoře pod schody, než mi v 11 letech přišel dopis z Bradavic.
-          </p>
-          <p>
-            Rád létám na koštěti, hrajeme s Ronem kouzelnické šachy (i když mě pořád poráží) a trávíme čas v Hagridově hájence na čaji a tvrdých sušenkách. Nemám rád Malfoye, Severuse Snapea (i když... možná to bylo jinak) a chlapíka bez nosu.
-          </p>
-
-          <h3>Koho bych rád potkal</h3>
-          <p>
-            Všechny členy Brumbálovy armády, přátele z Nebelvíru, mého kmotra Siria a kohokoliv, kdo chce bojovat za dobro proti Temným silám!
-          </p>
-        </div>
-
       </aside>
 
-      <!-- RIGHT COLUMN -->
+      <!-- Right Column: Short Bio, Snake Game, Friends SVGs, Messages -->
       <section class="right-col">
 
-        <!-- Status & Mood -->
-        <div class="card status-box">
-          <div class="status-title">Harryho aktuální nálada:</div>
-          <div class="status-content">
-            <span class="mood-emoji">⚡</span> <strong>Boojovná!</strong> — <em>"Připravuji se na Turnaj tří kouzelníků & hledám zbývající Horcruxy..."</em>
-          </div>
+        <!-- Short Bio Card -->
+        <div class="card bio-card">
+          <h3>⚡ O mně</h3>
+          <p>Ahoj, jsem Harry Potter. Student v Bradavicích, nebelvírský chytač a člen Brumbálovy armády. Rád létám na koštěti a bojuji proti Temným silám.</p>
         </div>
 
-        <!-- Music Player Box -->
-        <div class="card music-card" id="music">
-          <h3>MySpace MP3 Kouzelnický Přehrávač 🎵</h3>
-          <div class="player-body">
-            <div class="now-playing">
-              <span class="music-icon">📻</span>
-              <div class="song-info">
-                <strong id="song-title">Sušené Žáby - Do The Hippogriff</strong>
-                <span id="song-artist">Skladba z Vánočního plesu (Ohnivý pohár)</span>
-              </div>
-            </div>
-            <div class="visualizer">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </div>
-            <div class="player-controls">
-              <button id="prev-btn" title="Předchozí">⏮</button>
-              <button id="play-btn" title="Přehrát / Pozastavit">▶ Přehrát</button>
-              <button id="next-btn" title="Další">⏭</button>
-              <span class="volume-label">Hlasitost: 100%</span>
+        <!-- Snake Game Card -->
+        <div class="card game-card">
+          <div class="game-header">
+            <h3>🪄 Hra: Harry Potter sbírá hůlky</h3>
+            <div class="game-score">Skóre: <span id="current-score">0</span> | Nejlepší: <span id="high-score">0</span></div>
+          </div>
+          <p class="game-instructions">Použij šipky nebo WASD k ovládání Harryho (⚡) a sbírej magické hůlky (🪄)!</p>
+          <div class="canvas-container">
+            <canvas id="snake-game" width="400" height="300"></canvas>
+            <div id="game-overlay" class="game-overlay">
+              <p id="overlay-title">Harry Potter & Magické Hůlky</p>
+              <button id="start-game-btn" class="btn primary-btn">Spustit hru 🎮</button>
             </div>
           </div>
         </div>
 
-        <!-- TOP 8 FRIENDS -->
-        <div class="card friends-card" id="friends">
-          <h3>Harryho Top 8 Přátel</h3>
-          <p class="sub-text">Harry má v síti 8 nejlepších přátel:</p>
-
+        <!-- Friends Card with SVGs -->
+        <div class="card friends-card">
+          <h3>🧙‍♂️ Nejlepší Přátelé (Top 8)</h3>
           <div class="friends-grid">
 
-            <div class="friend-item">
-              <a href="#friends">Ron Weasley</a>
-              <div class="friend-avatar ron">👨‍🦰</div>
-              <p>Nejlepší kámoš</p>
+            <div class="friend-card">
+              <svg class="friend-avatar" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#fde3cf" stroke="#740001" stroke-width="2"/>
+                <!-- Red Hair -->
+                <path d="M 20 45 C 20 15, 80 15, 80 45 C 80 25, 20 25, 20 45 Z" fill="#d35400"/>
+                <circle cx="35" cy="50" r="4" fill="#333"/>
+                <circle cx="65" cy="50" r="4" fill="#333"/>
+                <path d="M 40 68 Q 50 78 60 68" stroke="#333" stroke-width="2" fill="none"/>
+              </svg>
+              <span>Ron Weasley</span>
             </div>
 
-            <div class="friend-item">
-              <a href="#friends">Hermiona Grangerová</a>
-              <div class="friend-avatar hermione">👩‍🦱</div>
-              <p>Mozek party</p>
+            <div class="friend-card">
+              <svg class="friend-avatar" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#fde3cf" stroke="#740001" stroke-width="2"/>
+                <!-- Bushy Hair -->
+                <path d="M 15 60 C 10 15, 90 15, 85 60 C 70 20, 30 20, 15 60 Z" fill="#6e2c00"/>
+                <circle cx="35" cy="50" r="4" fill="#333"/>
+                <circle cx="65" cy="50" r="4" fill="#333"/>
+                <path d="M 40 68 Q 50 75 60 68" stroke="#333" stroke-width="2" fill="none"/>
+              </svg>
+              <span>Hermiona Grangerová</span>
             </div>
 
-            <div class="friend-item">
-              <a href="#friends">Albus Brumbál</a>
-              <div class="friend-avatar dumbledore">🧙‍♂️</div>
-              <p>Největší čaroděj</p>
+            <div class="friend-card">
+              <svg class="friend-avatar" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#fde3cf" stroke="#740001" stroke-width="2"/>
+                <!-- Beard & Hat -->
+                <path d="M 20 55 Q 50 95 80 55 Q 50 100 20 55 Z" fill="#ecf0f1"/>
+                <path d="M 15 35 L 50 5 L 85 35 Z" fill="#740001"/>
+                <circle cx="38" cy="42" r="3" fill="#333"/>
+                <circle cx="62" cy="42" r="3" fill="#333"/>
+              </svg>
+              <span>Albus Brumbál</span>
             </div>
 
-            <div class="friend-item">
-              <a href="#friends">Rubeus Hagrid</a>
-              <div class="friend-avatar hagrid">🧔</div>
-              <p>Klíčník Bradavic</p>
+            <div class="friend-card">
+              <svg class="friend-avatar" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#e0ac69" stroke="#740001" stroke-width="2"/>
+                <!-- Wild Beard & Hair -->
+                <path d="M 15 45 C 10 75, 90 75, 85 45 C 80 98, 20 98, 15 45 Z" fill="#3b2219"/>
+                <circle cx="38" cy="45" r="3" fill="#fff"/>
+                <circle cx="62" cy="45" r="3" fill="#fff"/>
+              </svg>
+              <span>Rubeus Hagrid</span>
             </div>
 
-            <div class="friend-item">
-              <a href="#friends">Sirius Black</a>
-              <div class="friend-avatar sirius">🐺</div>
-              <p>Milovaný kmotr</p>
+            <div class="friend-card">
+              <svg class="friend-avatar" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#fde3cf" stroke="#740001" stroke-width="2"/>
+                <!-- Dark wavy hair -->
+                <path d="M 20 50 Q 15 15 50 15 Q 85 15 80 50 Q 85 30 50 25 Q 15 30 20 50 Z" fill="#1c2833"/>
+                <circle cx="35" cy="50" r="4" fill="#333"/>
+                <circle cx="65" cy="50" r="4" fill="#333"/>
+                <path d="M 40 68 Q 50 74 60 68" stroke="#333" stroke-width="2" fill="none"/>
+              </svg>
+              <span>Sirius Black</span>
             </div>
 
-            <div class="friend-item">
-              <a href="#friends">Ginny Weasleyová</a>
-              <div class="friend-avatar ginny">👩‍🦰</div>
-              <p>Láska mého života</p>
+            <div class="friend-card">
+              <svg class="friend-avatar" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#fde3cf" stroke="#740001" stroke-width="2"/>
+                <!-- Long Red Hair -->
+                <path d="M 18 55 Q 20 15 50 15 Q 80 15 82 55 Q 88 80 75 80 Q 75 45 50 25 Q 25 45 25 80 Q 12 80 18 55 Z" fill="#e67e22"/>
+                <circle cx="35" cy="50" r="4" fill="#333"/>
+                <circle cx="65" cy="50" r="4" fill="#333"/>
+                <path d="M 40 68 Q 50 78 60 68" stroke="#333" stroke-width="2" fill="none"/>
+              </svg>
+              <span>Ginny Weasleyová</span>
             </div>
 
-            <div class="friend-item">
-              <a href="#friends">Neville Longbottom</a>
-              <div class="friend-avatar neville">🌱</div>
-              <p>Hrdina Nebelvíru</p>
+            <div class="friend-card">
+              <svg class="friend-avatar" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#fde3cf" stroke="#740001" stroke-width="2"/>
+                <!-- Brown Hair -->
+                <path d="M 25 40 Q 50 20 75 40 Z" fill="#5d4037"/>
+                <circle cx="35" cy="48" r="4" fill="#333"/>
+                <circle cx="65" cy="48" r="4" fill="#333"/>
+                <path d="M 42 66 Q 50 72 58 66" stroke="#333" stroke-width="2" fill="none"/>
+              </svg>
+              <span>Neville Longbottom</span>
             </div>
 
-            <div class="friend-item">
-              <a href="#friends">Lenka Láskorádová</a>
-              <div class="friend-avatar luna">👱‍♀️</div>
-              <p>Strážkyně Škrkny</p>
+            <div class="friend-card">
+              <svg class="friend-avatar" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#fde3cf" stroke="#740001" stroke-width="2"/>
+                <!-- Blonde Hair -->
+                <path d="M 15 55 Q 20 10 50 10 Q 80 10 85 55 Q 90 85 75 85 Q 75 35 50 20 Q 25 35 25 85 Q 10 85 15 55 Z" fill="#f4d03f"/>
+                <circle cx="35" cy="48" r="4" fill="#333"/>
+                <circle cx="65" cy="48" r="4" fill="#333"/>
+                <path d="M 40 68 Q 50 76 60 68" stroke="#333" stroke-width="2" fill="none"/>
+              </svg>
+              <span>Lenka Láskorádová</span>
             </div>
 
           </div>
         </div>
 
-        <!-- 7 BOOKS BLOG / JOURNEY -->
-        <div class="card books-card" id="books">
-          <h3>📖 Blog: 7 Let v Bradavicích (Kronika 7 Knih)</h3>
-          <p class="sub-text">Moje vzpomínky a dobrodružství z každého ročníku. Kliknutím na knihu zobrazíš detaily ročníku!</p>
+        <!-- Comments Wall Card -->
+        <div class="card comments-card">
+          <h3>💬 Vzkazy na nástěnce</h3>
 
-          <div class="book-filters">
-            <button class="filter-btn active" data-filter="all">Všechny knihy (1-7)</button>
-            <button class="filter-btn" data-filter="1">1. Kámen mudrců</button>
-            <button class="filter-btn" data-filter="2">2. Tajemná komnata</button>
-            <button class="filter-btn" data-filter="3">3. Vězeň z Azkabanu</button>
-            <button class="filter-btn" data-filter="4">4. Ohnivý pohár</button>
-            <button class="filter-btn" data-filter="5">5. Fénixův řád</button>
-            <button class="filter-btn" data-filter="6">6. Princ dvojí krve</button>
-            <button class="filter-btn" data-filter="7">7. Relikvie smrti</button>
-          </div>
+          <form id="comment-form" class="comment-form">
+            <input type="text" id="comment-name" placeholder="Tvoje jméno..." required>
+            <textarea id="comment-text" rows="2" placeholder="Napiš vzkaz pro Harryho..." required></textarea>
+            <button type="submit" class="btn primary-btn">Odeslat vzkaz ✨</button>
+          </form>
 
-          <div class="books-list">
-
-            <!-- Book 1 -->
-            <article class="book-item" data-book="1">
-              <div class="book-header">
-                <span class="book-number">Kniha 1</span>
-                <h4>Harry Potter a Kámen mudrců (1. ročník)</h4>
-                <span class="book-year">1991 - 1992</span>
-              </div>
-              <div class="book-body">
-                <p><strong>Hlavní událost:</strong> Zjišťuji, že jsem čaroděj! Nástupiště 9¾, Moudrý klobouk mě zařazuje do Nebelvíru. Spolu s Ronem a Hermionou objevujeme tajemství Tříhlavého psa Chloupka a chráníme Kámen mudrců před Voldemortem skrývajícím se pod profesorem Quirrellem.</p>
-                <div class="book-meta">
-                  <span>🔑 Klíčový předmět: <em>Kámen mudrců & Neviditelný plášť</em></span>
-                  <span>⚡ Nezapomenutelný citát: <em>"Je třeba velká dávka odvahy k tomu, abychom se postavili svým nepřátelům, ale stejně tak k tomu, abychom se postavili svým přátelům."</em></span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 2 -->
-            <article class="book-item" data-book="2">
-              <div class="book-header">
-                <span class="book-number">Kniha 2</span>
-                <h4>Harry Potter a Tajemná komnata (2. ročník)</h4>
-                <span class="book-year">1992 - 1993</span>
-              </div>
-              <div class="book-body">
-                <p><strong>Hlavní událost:</strong> Létající auto Ford Anglia, skřítek Dobby varující před nebezpečím a otevření Tajemné komnaty. Studenti petrifikují! Pomocí meče Godrika Nebelvíru porážím Baziliška a ničím první Voldemortův horcrux – deník Toma Raddlea.</p>
-                <div class="book-meta">
-                  <span>🔑 Klíčový předmět: <em>Deník Toma Raddlea & Baziliščí zub</em></span>
-                  <span>⚡ Nezapomenutelný citát: <em>"Naše rozhodnutí ukážou, čím vskutku jsme, mnohem více než naše schopnosti."</em></span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 3 -->
-            <article class="book-item" data-book="3">
-              <div class="book-header">
-                <span class="book-number">Kniha 3</span>
-                <h4>Harry Potter a Vězeň z Azkabanu (3. ročník)</h4>
-                <span class="book-year">1993 - 1994</span>
-              </div>
-              <div class="book-body">
-                <p><strong>Hlavní událost:</strong> Útěk Siria Blacka z Azkabanu. Setkání s Moosrožci / Mozkomory a učení se kouzla <em>Expecto Patronum</em> s profesorem Lupinem. Zjišťuji, že Sirius je můj kmotr a ne zrádce! Zachraňujeme Kloboučníka / Klofana i Siria pomocí Obraceče času.</p>
-                <div class="book-meta">
-                  <span>🔑 Klíčový předmět: <em>Pobertův plánek (Marauder's Map) & Obraceč času</em></span>
-                  <span>⚡ Nezapomenutelný citát: <em>"Ti, kteří nás milují, nás nikdy doopravdy neopustí."</em></span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 4 -->
-            <article class="book-item" data-book="4">
-              <div class="book-header">
-                <span class="book-number">Kniha 4</span>
-                <h4>Harry Potter a Ohnivý pohár (4. ročník)</h4>
-                <span class="book-year">1994 - 1995</span>
-              </div>
-              <div class="book-body">
-                <p><strong>Hlavní událost:</strong> Turnaj tří kouzelníků! Ačkoli je mi teprve 14 let, mé jméno vyletí z Ohnivého poháru. Dračí úkol, Černé jezero a Bludiště. Na hřbitově v Malém Visánku jsem svědkem návratu Lorda Voldemorta a tragické smrti Cedrika Diggoryho.</p>
-                <div class="book-meta">
-                  <span>🔑 Klíčový předmět: <em>Přenášedlo Pohár šampiónů</em></span>
-                  <span>⚡ Nezapomenutelný citát: <em>"Brzy všichni budeme muset čelit volbě mezi tím, co je správné, a tím, co je snadné."</em></span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 5 -->
-            <article class="book-item" data-book="5">
-              <div class="book-header">
-                <span class="book-number">Kniha 5</span>
-                <h4>Harry Potter a Fénixův řád (5. ročník)</h4>
-                <span class="book-year">1995 - 1996</span>
-              </div>
-              <div class="book-body">
-                <p><strong>Hlavní událost:</strong> Ministerstvo kouzel popírá návrat Voldemorta. Růžová tyranka Dolores Umbridgeová přebírá Bradavice. Zakládáme <strong>Brumbálovu armádu</strong> v Komnatě nejvyšší potřeby! Bitva na Ministerstvu kouzel a ztráta milovaného kmotra Siria.</p>
-                <div class="book-meta">
-                  <span>🔑 Klíčový předmět: <em>Věštba o vyvoleném</em></span>
-                  <span>⚡ Nezapomenutelný citát: <em>"Máš v sobě jak dobré, tak temné stránky. Záleží na tom, jakou cestu si zvolíš."</em></span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 6 -->
-            <article class="book-item" data-book="6">
-              <div class="book-header">
-                <span class="book-number">Kniha 6</span>
-                <h4>Harry Potter a Princ dvojí krve (6. ročník)</h4>
-                <span class="book-year">1996 - 1997</span>
-              </div>
-              <div class="book-body">
-                <p><strong>Hlavní událost:</strong> Objevuji učebnici lektvarů patřící "Princi dvojí krve". Soukromé lekce s Brumbálem o minulosti Toma Raddlea a odhalení <strong>Horcruxů</strong>. Tragický večer na Astronomické věži a smrt Albus Brumbála.</p>
-                <div class="book-meta">
-                  <span>🔑 Klíčový předmět: <em>Učebnici Lektvarů & Medailonek R.A.B.</em></span>
-                  <span>⚡ Nezapomenutelný citát: <em>"Příště až tě někdo požádá o pomoc, neváhej."</em></span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 7 -->
-            <article class="book-item" data-book="7">
-              <div class="book-header">
-                <span class="book-number">Kniha 7</span>
-                <h4>Harry Potter a Relikvie smrti (7. ročník)</h4>
-                <span class="book-year">1997 - 1998</span>
-              </div>
-              <div class="book-body">
-                <p><strong>Hlavní událost:</strong> Neobnovujeme 7. ročník v Bradavicích. Spolu s Ronem a Hermionou putujeme po celém Anglii a hledáme/ničíme zbývající Horcruxy. Legenda o 3 Relikviích smrti (Bezbezová hůlka, Kámen vzkříšení, Neviditelný plášť). Velkolepá <strong>Bitva o Bradavice</strong> a finální porážka Lorda Voldemorta!</p>
-                <div class="book-meta">
-                  <span>🔑 Klíčový předmět: <em>Bezbezová hůlka & Relikvie smrti</em></span>
-                  <span>⚡ Nezapomenutelný citát: <em>"Až do samého konce." (Until the very end)</em></span>
-                </div>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <!-- COMMENTS / WALL -->
-        <div class="card comments-card" id="comments">
-          <h3>Nástěnka & Komentáře přátel (Zprávy)</h3>
-
-          <div class="add-comment-box">
-            <p><strong>Napiš Harrymu na nástěnku:</strong></p>
-            <form id="comment-form">
-              <input type="text" id="comment-name" placeholder="Tvoje jméno / Přezdívka" required>
-              <textarea id="comment-text" rows="3" placeholder="Napiš vzkaz pro Harryho..." required></textarea>
-              <button type="submit">Odeslat na nástěnku ✨</button>
-            </form>
-          </div>
-
-          <div class="comments-list" id="comments-list">
-
+          <div id="comments-list" class="comments-list">
             <div class="comment-item">
-              <div class="comment-author">
+              <div class="comment-header">
                 <strong>Ron Weasley</strong>
-                <span class="comment-date">Včera v 18:42</span>
+                <span class="comment-time">Dnes 14:20</span>
               </div>
-              <p>Kámo, máma upekla další várku maminčiných biskupských chlebíčků. A taky se musíme připravit na zítřejší trénink Quidditche, Wood šílí!</p>
+              <p>Kámo, nezapomeň na dnešní trénink Quidditche!</p>
             </div>
-
             <div class="comment-item">
-              <div class="comment-author">
+              <div class="comment-header">
                 <strong>Hermiona Grangerová</strong>
-                <span class="comment-date">Včera v 20:15</span>
+                <span class="comment-time">Dnes 12:05</span>
               </div>
-              <p>Harry! Nezapomeň, že máme do pátku odevzdat esej na 3 stopy pergamenu pro profesora Snapea o Přeměňování. Pokud potřebuješ půjčit poznámky, napiš!</p>
+              <p>Máme hotové úkoly do Lektvarů? Snape bude zkoušet!</p>
             </div>
-
-            <div class="comment-item">
-              <div class="comment-author">
-                <strong>Rubeus Hagrid</strong>
-                <span class="comment-date">Dnes v 09:10</span>
-              </div>
-              <p>Ahoj Harry, přijďte s Ronem a Hermionou odpoledne na čaj! Mám v hájence nového tvora... ale nikomu ani slovo, je to tajemství! 🐉</p>
-            </div>
-
-            <div class="comment-item">
-              <div class="comment-author">
-                <strong>Sirius Black</strong>
-                <span class="comment-date">Dnes v 10:05</span>
-              </div>
-              <p>Dávej na sebe pozor, Harry. Kdykoliv bys cokoliv potřeboval, pošli Poštolku nebo použij Zrcátko. Jsem na tebe pyšný!</p>
-            </div>
-
           </div>
         </div>
 
       </section>
 
-    </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2005 MySpace.com Harry Potter Profile. Vytvořeno pro všechny fanoušky Bradavic ✨</p>
-      <p><small>Mischief Managed (Lumos Maxima)! All wizarding rights reserved.</small></p>
+    <footer class="profile-footer">
+      <p>&copy; Harry Potter Nebelvírský Profil &bull; Neprochej, pokud nemáš v úmyslu nekalost! ✨</p>
     </footer>
 
-  </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
